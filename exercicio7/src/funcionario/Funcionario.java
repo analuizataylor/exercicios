@@ -1,3 +1,11 @@
+package funcionario;
+/*
+- declaração de atributos
+- contrutores
+- getters
+- setters
+- toStingr
+ */
 
 public class Funcionario {
 

@@ -45,7 +45,6 @@ public class FuncionarioMain {
             }
         } while (opcao != 4);
 
-        entrada.close();
     }
 
     
