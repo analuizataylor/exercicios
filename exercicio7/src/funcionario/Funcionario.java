@@ -4,7 +4,7 @@ package funcionario;
 - contrutores
 - getters
 - setters
-- toStingr
+- toString
  */
 
 public class Funcionario {
