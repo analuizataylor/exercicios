@@ -19,7 +19,7 @@ public class Funcionario {
     public Funcionario (String n, int h, char c, double s) {
         this.nome = n;
         this.horasTrabalhadas = h;
-        this.categoria = c;
+        this.categoria = ' ';
     }
 
 
@@ -64,6 +64,6 @@ public class Funcionario {
         return "Nome: " + this.nome + "\n" +
             "Horas trabalhadas: " + this.horasTrabalhadas + "\n" +
             "Categoria: " + this.categoria + "\n" +
-            "Salario Bruto: " + calcularSalario() + "\n";
+            "Salario Bruto: R$%.2f" + calcularSalario() + "\n";
     }
 }

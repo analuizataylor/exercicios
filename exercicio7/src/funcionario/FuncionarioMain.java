@@ -29,26 +29,60 @@ public class FuncionarioMain {
 
         //instancia o vetor
         FuncionarioVetor empresa = new FuncionarioVetor(18);
+
         do {
             System.out.println("1. Cadastrar um novo funcionário \n"+
-            "2. Alterar horas trabalhadas \n"+
-            "3. Mostrar dados dos funcionários \n" +
-            "4. Sair do menu");
+                                "2. Alterar horas trabalhadas \n"+
+                                "3. Mostrar dados dos funcionários \n" +
+                                "4. Sair do menu");
 
-            opcao = scan.next().charAt(0);
+            opcao = entrada.next().charAt(0);
+            entrada.nextLine();
+
             switch (opcao) {
-            
-            case '1':
-                //metodo
-                break;
-            
-            }
-        } while (opcao != 4);
+                case '1':
+                    cadastrarFuncionario(empresa);
+                    break;
+                case '2':
+                    alterarHorasFuncionario(empresa);
+                    break;
+                case '3':
+                    System.out.println(empresa.toString());
+                    break;
+                case '4':
+                    System.out.println("Você saiu do menu");
+                    break;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+                    }
+                } while (opcao != '4');
 
+        entrada.close();
     }
-
     
+    static void cadastrarFuncionario(FuncionarioVetor){
+        String nome;
+        int numeroDeHoras;
+        char categoria;
 
+        System.out.println("Digite o nome do funcionário: ");
+        nome = entrada.nextLine();
+
+        System.out.println("Digite as horas trabalhadas desse funcionário: ");
+        numeroDeHoras = entrada.nextInt;
+        entrada.nextLine();
+
+        System.out.println("Digite a categoria do funcionário (G - GERENTE, O - OPERÁRIO): ");
+        categoria = entrada.nextLine().toUpperCase().charAt();
+
+        Funcionario novo = new Funcionario(nome, numeroDeHoras, categoria);
+
+        if (t.inserirFuncionario (novo)) {
+            System.out.println("Operação realizada com sucesso \n");
+        } else {
+            System.out.println("Operação não realizada, arquivo cheio");
+        }
+    }
     
 
 

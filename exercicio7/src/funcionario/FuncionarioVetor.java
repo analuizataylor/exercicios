@@ -42,9 +42,8 @@ public class FuncionarioVetor {
     } 
 
 
-
     //cadastrar um novo funcionario
-    public boolean inserirDados (Funcionario novo) {
+    public boolean cadastrarFuncionario (Funcionario novo) {
         if (this.quantidadeVetor == this.vetor.length) {
             //condição para saber se o arquivo está cheio
             return false;
@@ -54,6 +53,20 @@ public class FuncionarioVetor {
             return true;
         }
     }
+
+
+    //alterar horas trabalhadas de um funcionario
+    public boolean alterarHorasFuncionario (String nome, int novasHoras) {
+
+    for (int i = 0; i < this.quantidadeVetor; i++) {
+        if (vetor[i].getNome().equalsIgnoreCase(nome)) {
+            vetor[i].setHorasTrabalhadas(novasHoras);
+            return true;
+        }
+    } 
+    return false;  //retorna false se a posição for inválida   
+    }
+
 
     //mostrar todos os dados do objeto vetor
     public String toString() {
