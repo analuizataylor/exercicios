@@ -21,8 +21,8 @@ package exercicio1;
     }
 
     //getters
-    //publicos + atributo(primeiro) + return
-
+    //public + atributo(primeiro) + get + parametros
+    //return + this
     public Filme getVetor (int indice) {
         return this.vetor[indice];
     }
@@ -32,7 +32,8 @@ package exercicio1;
     }
 
     //setters
-    //publicos + void + 
+    //publicos + void + set +  parametros
+    //this 
     public void setVetor (int indice, Filme novo) {
         this.vetor[indice] = novo;
     }
