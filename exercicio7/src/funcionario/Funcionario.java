@@ -16,7 +16,7 @@ public class Funcionario {
 
     
     //contrutores
-    public Funcionario (String n, int h, char c, double s) {
+    public Funcionario (String n, int h, char c) {
         this.nome = n;
         this.horasTrabalhadas = h;
         this.categoria = ' ';
@@ -28,10 +28,10 @@ public class Funcionario {
         return this.nome;
     }
     public int getHorasTrabalhadas() {
-        return horasTrabalhadas;
+        return this.horasTrabalhadas;
     }
     public char getCategoria() {
-        return categoria;
+        return this.categoria;
     }
 
 
@@ -61,9 +61,9 @@ public class Funcionario {
 
     //toString = mostra os conteúdos dos atributos
     public String toString() {
-        return "Nome: " + this.nome + "\n" +
+        return "\n Nome: " + this.nome + "\n" +
             "Horas trabalhadas: " + this.horasTrabalhadas + "\n" +
             "Categoria: " + this.categoria + "\n" +
-            "Salario Bruto: R$%.2f" + calcularSalario() + "\n";
+            "Salario Bruto: R$" + String.format("%.2f", calcularSalario()) + "\n";
     }
 }

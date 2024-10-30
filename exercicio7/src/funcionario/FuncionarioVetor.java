@@ -74,6 +74,7 @@ public class FuncionarioVetor {
 
         for (int i=0; i < this.quantidadeVetor; i++) {
             resposta += (i + 1) + "." + this.vetor[i].toString();
+            return resposta;
         }
         return resposta;
     }
